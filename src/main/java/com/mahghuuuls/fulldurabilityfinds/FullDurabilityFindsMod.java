@@ -1,6 +1,7 @@
 package com.mahghuuuls.fulldurabilityfinds;
 
 import com.mahghuuuls.fulldurabilityfinds.config.ModConfig;
+import com.mahghuuuls.fulldurabilityfinds.event.ContainerCorrectionEvents;
 import com.mahghuuuls.fulldurabilityfinds.event.DropCorrectionEvents;
 import com.mahghuuuls.fulldurabilityfinds.event.PickupCorrectionEvents;
 import com.mahghuuuls.fulldurabilityfinds.event.ResultCorrectionEvents;
@@ -19,6 +20,7 @@ public class FullDurabilityFindsMod {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         ModConfig.load(event.getSuggestedConfigurationFile(), LOGGER);
+        MinecraftForge.EVENT_BUS.register(new ContainerCorrectionEvents());
         MinecraftForge.EVENT_BUS.register(new DropCorrectionEvents());
         FMLCommonHandler.instance().bus().register(new PickupCorrectionEvents());
         FMLCommonHandler.instance().bus().register(new ResultCorrectionEvents());
