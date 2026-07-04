@@ -1,5 +1,6 @@
 package com.mahghuuuls.fulldurabilityfinds;
 
+import com.mahghuuuls.fulldurabilityfinds.config.ModConfig;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.LogManager;
@@ -12,6 +13,7 @@ public class FullDurabilityFindsMod {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        ModConfig.load(event.getSuggestedConfigurationFile(), LOGGER);
         LOGGER.info("{} initialized.", Tags.MOD_NAME);
     }
 }
