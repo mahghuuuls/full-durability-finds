@@ -2,15 +2,12 @@
 
 Keeps newly found or encountered normal-durability items at full durability.
 
-Full Durability Finds is a Minecraft 1.12.2 Forge mod. It corrects normal Minecraft durability damage on supported newly found or encountered item stacks, while leaving custom durability-like systems alone.
+Full Durability Finds is a Minecraft 1.12.2 Forge mod that corrects normal Minecraft durability damage on supported newly found or encountered item stacks, while leaving custom durability-like systems alone.
 
-This repository contains the source code, project metadata, and release documentation for the mod.
+## Release Docs
 
-## Public Mod Page Copy
-
-Player-facing download-page copy is kept in [`MOD-PAGE.md`](MOD-PAGE.md).
-
-Release notes are kept in [`CHANGELOG.md`](CHANGELOG.md).
+- [Mod page copy](MOD-PAGE.md)
+- [Changelog](CHANGELOG.md)
 
 ## Project Details
 
@@ -21,9 +18,11 @@ Release notes are kept in [`CHANGELOG.md`](CHANGELOG.md).
 - Package: `com.mahghuuuls.fulldurabilityfinds`
 - License: MIT
 
-## Configuration
+## Installation Note
 
-The generated config includes behavior toggles for:
+For multiplayer, install the mod on both the server and every connecting client.
+
+## Config Keys
 
 - `debug`
 - `correctMobDrops`
@@ -33,23 +32,13 @@ The generated config includes behavior toggles for:
 - `correctSmeltingResults`
 - `correctOpenedContainers`
 
-Correction categories are enabled by default. `debug` is disabled by default. Config changes may require a game or server restart.
+Correction categories are enabled by default. `debug` is disabled by default.
 
-## Build
-
-Use the included Gradle wrapper:
-
-```bat
-.\gradlew.bat build
-```
-
-The release artifact is produced during the normal Gradle build flow.
-
-## Scope Notes
+## Scope
 
 The mod corrects normal Minecraft item damage through supported event and container paths. It does not perform world-wide scans, chunk scans, tile-entity scans, or general tick-based player inventory scans.
 
-The first release does not cover villager trades, arbitrary modded reward screens, direct inventory insertion paths that bypass supported events, player death drops, or non-chest opened containers.
+Full Durability Finds does not cover villager trades, arbitrary modded reward screens, direct inventory insertion paths that bypass supported events, player death drops, or non-chest opened containers.
 
 ## License
 

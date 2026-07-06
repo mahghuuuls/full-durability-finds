@@ -16,6 +16,7 @@
 
 - Preserves unrelated item state such as NBT, enchantments, custom names, attributes, capabilities, and stack count.
 - Affects normal Minecraft item damage only; custom durability-like systems are not reset.
+- Requires installation on both the server and connecting clients for multiplayer.
 - Does not require Simply Unbreakable, but pairs well with mods that prevent durability loss during item use.
 
 ### Known Limits
